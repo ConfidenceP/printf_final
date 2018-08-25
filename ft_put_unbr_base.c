@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int		ft_put_unbr_base(uintmax_t n, char *base)
+int		ft_put_unbr_base(uintmax_t n, int base)
 {
 	char			*s;
 	size_t			nlen;
