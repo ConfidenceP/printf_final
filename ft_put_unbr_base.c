@@ -31,8 +31,7 @@ int		ft_put_unbr_base(uintmax_t n, int base)
 		n /= base;
 	}
 	s[--nlen] = '\0';
-	write (1, s, ft_strlen(s));
-	count = ft_strlen(s);
+	count = ft_putstr(s);
 	free(s);
 	return (count);
 }
