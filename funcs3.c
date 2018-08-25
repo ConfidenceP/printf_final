@@ -32,7 +32,7 @@ int		check_flag_15a(char *p, va_list ap)
 	else if (j == 5 || j == 6)
 	{
 		ft_putchar('0');
-		return (pf_octal(ap) + 1);
+		return (pf_octal_b(ap) + 1);
 	}
 	else
 		return (check_flag_15b(p, ap));
