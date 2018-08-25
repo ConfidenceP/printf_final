@@ -24,7 +24,7 @@ int		ft_put_unbr_base(uintmax_t n, int base)
 	while (num /= base)
 		nlen++;
 	if (!(s = (char *)malloc(sizeof(char) * nlen))
-		return (NULL);
+		return (0);
 	while (nlen > 0)
 	{
 		s[--nlen] = (n % base) + ((n % base > 9) ? 'a' - 10 : '0');
