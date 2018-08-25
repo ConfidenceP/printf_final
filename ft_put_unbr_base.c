@@ -23,7 +23,7 @@ int		ft_put_unbr_base(uintmax_t n, int base)
 	num = n;
 	while (num /= base)
 		nlen++;
-	if (!(s = (char *)malloc(sizeof(char) * nlen))
+	if (!(s = (char *)malloc(sizeof(char) * nlen)))
 		return (0);
 	while (nlen > 0)
 	{
