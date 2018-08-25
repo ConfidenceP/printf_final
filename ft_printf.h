@@ -51,7 +51,7 @@ int						ft_putwstr(wchar_t *wstr);
 int						ft_putwchar(wchar_t wchar);
 int						ft_putnbr(int nbr1);
 int						ft_putnbr_base(int nb, char *base);
-int						ft_put_unbr_base(uintmax_t nb, int base);
+int						ft_put_unbr_base(uintmax_t nb, char *base);
 int						ft_strlen(const char *str);
 char					*ft_strdup(const char *str);
 char					*ft_itoa_base(int value, int base);
