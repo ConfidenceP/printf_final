@@ -28,7 +28,7 @@ int		pf_hex_p(va_list ap)
 	}
 	else
 	{
-		ft_putstr("0x7ffe");
+		ft_putstr("0x");
 		ret = ft_put_unbr_base(hexa, base);
 	}
 	return (ret + 6);
