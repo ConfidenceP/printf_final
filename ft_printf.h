@@ -28,6 +28,8 @@ int						ft_printf(const char *format, ...);
 int						pf_putstr(va_list ap);
 int						pf_wdec(va_list ap);
 int						pf_woctal(va_list ap);
+int						pf_woctal_b(va_list ap);
+int						pf_octal_b(va_list ap);
 int						pf_putwstr(va_list ap);
 int						pf_putwchar(va_list ap);
 int						pf_putnbr(va_list ap);
