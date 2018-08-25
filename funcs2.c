@@ -6,7 +6,7 @@
 /*   By: cmukwind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 15:01:18 by cmukwind          #+#    #+#             */
-/*   Updated: 2018/08/25 15:30:28 by cmukwind         ###   ########.fr       */
+/*   Updated: 2018/08/25 17:41:53 by cmukwind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int		pf_hex_p(va_list ap)
 {
 	uintmax_t	hexa;
-	char			*base;
-	int				ret;
+	char		*base;
+	int			ret;
 
 	hexa = (uintmax_t)va_arg(ap, void *);
 	base = "0123456789abcdef";

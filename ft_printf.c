@@ -6,7 +6,7 @@
 /*   By: cmukwind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 10:55:08 by cmukwind          #+#    #+#             */
-/*   Updated: 2018/08/24 17:53:47 by cmukwind         ###   ########.fr       */
+/*   Updated: 2018/08/25 18:12:40 by cmukwind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,11 @@ int		ft_printf(const char *format, ...)
 			if (f2[i + 2] && (cspec(f2[i + 1]) >= 15 && cspec(f2[i + 1]) <= 17))
 				count += check_flag(&f2[i + 2], cspec(f2[i + 1]), ap);
 			count += specs[cspec(f2[i + 1])](ap);
-			if (cspec(f2[i + 1]) >= 15 && cspec(f2[i + 1]) <= 17)
-				i++;
+			(cspec(f2[i + 1]) >= 15 && cspec(f2[i + 1]) <= 17) ? i++ : 0;
 			i++;
 		}
 		else
-			count += ft_putchar(f2[i]);
+			count += (f2[i] == '%' && f2[i + 1] != '%') ? 0 : ft_putchar(f2[i]);
 	va_end(ap);
 	return (count);
 }
