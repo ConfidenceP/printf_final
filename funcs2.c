@@ -15,11 +15,11 @@
 int		pf_hex_p(va_list ap)
 {
 	unsigned int	hexa;
-	char			*base;
+	//char			*base;
 	int				ret;
 
 	hexa = (uintmax_t)va_arg(ap, void *);
-	base = "0123456789abcdef";
+	//base = "0123456789abcdef";
 	if (hexa == 0)
 	{
 		ft_putstr("0x");
@@ -29,19 +29,19 @@ int		pf_hex_p(va_list ap)
 	else
 	{
 		ft_putstr("0x");
-		ret = ft_put_unbr_base(hexa, base);
+		ret = ft_put_unbr_base(hexa, 16);
 	}
-	return (ret + 6);
+	return (ret + 2);
 }
 
 int		pf_hex_x(va_list ap)
 {
 	unsigned int	hexa;
-	char			*base;
+	//char			*base;
 	int				ret;
 
 	hexa = va_arg(ap, unsigned int);
-	base = "0123456789abcdef";
+	//base = "0123456789abcdef";
 	if (hexa == 0)
 	{
 		ft_putnbr(hexa);
@@ -50,7 +50,7 @@ int		pf_hex_x(va_list ap)
 	else
 	{
 		ft_putstr("0x");
-		ret = ft_put_unbr_base(hexa, base);
+		ret = ft_put_unbr_base(hexa, 16);
 	}
 	return (ret + 2);
 }
@@ -58,11 +58,11 @@ int		pf_hex_x(va_list ap)
 int		pf_hex_h(va_list ap)
 {
 	unsigned int	hexa;
-	char			*base;
+	//char			*base;
 	int				ret;
 
 	hexa = va_arg(ap, unsigned int);
-	base = "0123456789ABCDEF";
+	//base = "0123456789ABCDEF";
 	if (hexa == 0)
 	{
 		ft_putnbr(hexa);
@@ -71,7 +71,7 @@ int		pf_hex_h(va_list ap)
 	else
 	{
 		ft_putstr("0X");
-		ret = ft_put_unbr_base(hexa, base);
+		ret = ft_put_unbr_base(hexa, 16);
 	}
 	return (ret + 2);
 }
@@ -79,35 +79,35 @@ int		pf_hex_h(va_list ap)
 int		pf_hex(va_list ap)
 {
 	unsigned int	hex;
-	char			*base;
+	//char			*base;
 	int				ret;
 
 	hex = va_arg(ap, unsigned int);
-	base = "0123456789ABCDEF";
+	//base = "0123456789ABCDEF";
 	if (hex == 0)
 	{
 		ft_putnbr(hex);
 		return (1);
 	}
 	else
-		ret = ft_put_unbr_base(hex, base);
+		ret = ft_put_unbr_base(hex, 16);
 	return (ret);
 }
 
 int		pf_hex_a(va_list ap)
 {
 	unsigned int	hexa;
-	char			*base;
+	//char			*base;
 	int				ret;
 
 	hexa = va_arg(ap, unsigned int);
-	base = "0123456789abcdef";
+	//base = "0123456789abcdef";
 	if (hexa == 0)
 	{
 		ft_putnbr(hexa);
 		return (1);
 	}
 	else
-		ret = ft_put_unbr_base(hexa, base);
+		ret = ft_put_unbr_base(hexa, 16);
 	return (ret);
 }
