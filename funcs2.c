@@ -14,7 +14,7 @@
 
 int		pf_hex_p(va_list ap)
 {
-	unsigned int	hexa;
+	uintmax_t	hexa;
 	//char			*base;
 	int				ret;
 
