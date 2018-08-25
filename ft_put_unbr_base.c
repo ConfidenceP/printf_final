@@ -12,7 +12,31 @@
 
 #include "ft_printf.h"
 
-int		ft_put_unbr_base(uintmax_t nb, char *base)
+int		ft_put_unbr_base(uintmax_t n, char *base)
+{
+	char			*s;
+	size_t			nlen;
+	uintmax_t		num;
+	int			count;
+
+	nlen = 1;
+	num = n;
+	while (num /= base)
+		nlen++;
+	if (!(s = (char *)malloc(sizeof(char) * nlen))
+		return (NULL);
+	while (nlen > 0)
+	{
+		s[--nlen] = (n % base) + ((n % base > 9) ? 'a' - 10 : '0');
+		n /= base;
+	}
+	s[--nlen] = '\0';
+	write (1, s, ft_strlen(s));
+	count = ft_strlen(s);
+	free(s);
+	return (count);
+}
+/*
 {
 	int				a;
 	int				count;
@@ -29,4 +53,4 @@ int		ft_put_unbr_base(uintmax_t nb, char *base)
 		count++;
 	}
 	return (count);
-}
+}*/
