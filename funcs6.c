@@ -33,19 +33,19 @@ int		digit_count(intmax_t nb)
 int		pf_octal(va_list ap)
 {
 	unsigned int	oct;
-	char			*base;
+	//char			*base;
 
 	oct = va_arg(ap, unsigned int);
-	base = "01234567";
-	return (ft_put_unbr_base(oct, base));
+	//base = "01234567";
+	return (ft_put_unbr_base(oct, 8));
 }
 
 int		pf_woctal(va_list ap)
 {
 	unsigned long long	oct;
-	char				*base;
+	//char				*base;
 
 	oct = va_arg(ap, unsigned long long);
-	base = "01234567";
-	return (ft_put_unbr_base(oct, base));
+	//base = "01234567";
+	return (ft_put_unbr_base(oct, 8));
 }
