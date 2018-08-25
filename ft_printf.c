@@ -43,7 +43,7 @@ void	specs_init(int (**specs)(va_list ap))
 	specs[10] = &pf_hex_a;
 	specs[11] = &pf_hex;
 	specs[12] = &pf_putchar;
-	specs[13] = &pf_putwchar;
+	specs[13] = &pf_putchar;
 	specs[14] = &pf_percent;
 	specs[15] = &move_on;
 	specs[16] = &move_on;
